@@ -1,0 +1,113 @@
+﻿{
+  "manifest_version": 3,
+  "name": "PDD Merchant Helper",
+  "version": "1.0.0",
+  "description": "Pinduoduo merchant backend (mms) efficiency tool: review analysis, activity assistant, negative feedback appeal, after-sales appeal, keep-alive.",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "permissions": ["storage", "unlimitedStorage", "scripting", "activeTab", "tabs", "webRequest", "alarms", "debugger", "offscreen"],
+  "host_permissions": [
+    "https://mms.pinduoduo.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["pdd-page-anti-hook.js"],
+      "matches": ["https://mms.pinduoduo.com/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PDD Merchant Helper"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://mms.pinduoduo.com/*"],
+      "js": ["inject-anti-hook-loader.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/*"],
+      "js": ["inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/*"],
+      "js": ["activity-inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/goods/evaluation/index*"],
+      "js": ["report-reply-inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/goods/evaluation/index*"],
+      "js": ["report-reply-content.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/orders/order/carriage/list*"],
+      "js": ["pdd-carriage-template-cleaner.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/aftersales/customer_complain_appeal/detail*"],
+      "js": ["negative-appeal-inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/aftersales/customer_complain_appeal/detail*"],
+      "js": ["negative-appeal-content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://erp.huice.com/*"],
+      "js": ["huice-inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://erp.huice.com/*"],
+      "js": ["huice-content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/orders/appeals/aftersale/order*"],
+      "js": ["aftersale-appeal-inject.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://mms.pinduoduo.com/orders/appeals/aftersale/order*"],
+      "js": ["aftersale-appeal-content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

@@ -1,0 +1,337 @@
+#dtx-negative-appeal-overlay-card {
+  display: flex;
+  flex-direction: column;
+  height: min(88vh, 720px);
+  max-height: min(88vh, 720px);
+}
+
+#dtx-negative-appeal-overlay-card:has(.dtx-na-panel--idle) {
+  height: min(520px, 85vh);
+  min-height: min(400px, 70vh);
+  max-height: min(520px, 85vh);
+}
+
+.dtx-na-overlay-shell,
+#dtx-negative-appeal-overlay-card .ant-app {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.dtx-na-panel {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 12px 16px 14px;
+}
+
+.dtx-na-panel__head {
+  flex: 0 0 auto;
+}
+
+.dtx-na-panel__setup-collapse {
+  margin-bottom: 0;
+}
+
+.dtx-na-panel__setup-collapse .ant-collapse-header {
+  padding: 8px 12px !important;
+  font-size: 12px;
+}
+
+.dtx-na-panel__setup-collapse .ant-collapse-content-box {
+  padding: 8px 12px 10px !important;
+}
+
+.dtx-na-panel__scroll {
+  flex: 1 1 auto;
+  min-height: 320px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 2px;
+}
+
+/* 内容未满时按钮贴底；内容超出时按钮在滚动区末尾 */
+.dtx-na-panel__scroll-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.dtx-na-panel__toolbar {
+  display: flex;
+  align-items: center;
+  margin: -4px 0 10px;
+}
+
+.dtx-na-panel__back {
+  padding-left: 0 !important;
+  color: #1677ff !important;
+  font-weight: 500;
+}
+
+.dtx-na-panel__back:hover {
+  color: #0958d9 !important;
+  background: #f0f7ff !important;
+}
+
+.dtx-na-panel__scroll .ant-tabs-nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-bottom: 0 !important;
+  background: #fff;
+  padding-bottom: 8px;
+}
+
+.dtx-na-panel__scroll .ant-tabs,
+.dtx-na-panel__scroll .ant-tabs-content-holder,
+.dtx-na-panel__scroll .ant-tabs-content,
+.dtx-na-panel__scroll .ant-tabs-tabpane {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.dtx-na-panel__form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dtx-na-panel__form-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.dtx-na-panel__loading {
+  text-align: center;
+  padding: 32px 0;
+}
+
+.dtx-na-panel__status-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.dtx-na-panel__status-pill {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.dtx-na-panel__status-pill--ok {
+  border-color: #b7eb8f;
+  background: #f6ffed;
+}
+
+.dtx-na-panel__status-pill--warn {
+  border-color: #ffe58f;
+  background: #fffbe6;
+}
+
+.dtx-na-panel__status-pill--err {
+  border-color: #ffccc7;
+  background: #fff2f0;
+}
+
+.dtx-na-panel__status-pill-title {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 2px;
+}
+
+.dtx-na-panel__status-pill-meta {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.dtx-na-panel__card {
+  border-radius: 12px !important;
+  border: 1px solid #eef2f7 !important;
+  box-shadow: none !important;
+  margin-bottom: 12px;
+}
+
+.dtx-na-panel__card .ant-card-head {
+  min-height: 42px;
+  padding: 0 14px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dtx-na-panel__card .ant-card-body {
+  padding: 14px !important;
+}
+
+.dtx-na-panel__recommend-box {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f0f7ff 0%, #fafcff 100%);
+  border: 1px solid #d6e4ff;
+  margin-bottom: 12px;
+}
+
+.dtx-na-panel__recommend-reason {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0958d9;
+  margin-bottom: 10px;
+  line-height: 1.45;
+}
+
+.dtx-na-panel__tuju-wrap {
+  padding: 2px 0;
+}
+
+.dtx-na-panel__chat-wrap {
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.dtx-na-panel__after-wrap {
+  padding: 4px 0;
+}
+
+.dtx-na-panel__qc-loading {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 12px;
+}
+
+.dtx-na-panel__qc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.dtx-na-panel__qc-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+}
+
+.dtx-na-panel__qc-thumb {
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #fff;
+  cursor: zoom-in;
+}
+
+.dtx-na-panel__qc-name {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 6px;
+  max-width: 100%;
+}
+
+.dtx-na-panel__qc-dl {
+  align-self: flex-end;
+  padding: 0 !important;
+  height: auto !important;
+  font-size: 12px !important;
+}
+
+.dtx-na-panel--idle .dtx-na-panel__empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 16px;
+}
+
+.dtx-na-panel__empty {
+  text-align: center;
+  padding: 24px 16px 8px;
+  color: #64748b;
+}
+
+.dtx-na-panel__empty-icon {
+  font-size: 40px;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
+
+.dtx-na-panel__footer {
+  flex: 0 0 auto;
+  margin-top: auto;
+  padding-top: 12px;
+  padding-bottom: 2px;
+  border-top: 1px solid #f1f5f9;
+  background: #fff;
+}
+
+.dtx-na-panel__footer-primary {
+  min-height: 42px !important;
+  font-weight: 600;
+}
+
+.dtx-na-panel__footer-tools {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.dtx-na-panel__footer-tools .ant-btn {
+  min-height: 36px;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 12px;
+}
+
+.dtx-na-panel__log-box {
+  padding: 10px 12px;
+  background: #1e293b;
+  border-radius: 8px;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.dtx-na-panel__tabs .ant-tabs-nav {
+  margin-bottom: 12px !important;
+}
+
+.dtx-na-panel__section-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}

@@ -1,0 +1,118 @@
+/* 仿 MMS 客服聊天搜索页「聊天记录」列表（便于截图作凭证） */
+.dtx-mms-chat {
+  background: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 1.5;
+}
+
+.dtx-mms-chat__title {
+  padding: 14px 16px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.88);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dtx-mms-chat__list {
+  padding: 0;
+}
+
+.dtx-mms-chat__row {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dtx-mms-chat__row:last-child {
+  border-bottom: none;
+}
+
+.dtx-mms-chat__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.dtx-mms-chat__avatar {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.dtx-mms-chat__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dtx-mms-chat__avatar--buyer {
+  background: linear-gradient(135deg, #f8b4c4, #e891a8);
+}
+
+.dtx-mms-chat__avatar--staff {
+  background: #e8f5e9;
+}
+
+.dtx-mms-chat__avatar--system {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 16px;
+}
+
+.dtx-mms-chat__name {
+  flex: 1;
+  min-width: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.dtx-mms-chat__time {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
+
+.dtx-mms-chat__body {
+  margin-left: 46px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.75);
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.dtx-mms-chat__row--system .dtx-mms-chat__name {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 400;
+}
+
+.dtx-mms-chat__row--system .dtx-mms-chat__body {
+  margin-left: 46px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.dtx-mms-chat__img {
+  display: block;
+  max-width: 220px;
+  max-height: 220px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+  object-fit: contain;
+  background: #fafafa;
+}
+
+.dtx-mms-chat__link {
+  color: #1677ff;
+}

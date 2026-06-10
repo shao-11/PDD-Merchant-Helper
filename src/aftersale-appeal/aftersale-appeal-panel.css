@@ -1,0 +1,93 @@
+#dtx-aftersale-appeal-overlay-card {
+  display: flex;
+  flex-direction: column;
+  height: min(88vh, 720px);
+  max-height: min(88vh, 720px);
+  width: min(600px, 96vw);
+}
+
+.dtx-asa-overlay-shell,
+#dtx-aftersale-appeal-overlay-card .ant-app {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.dtx-asa-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px 14px;
+  overflow: hidden;
+}
+
+/* Spin 需占满剩余高度，内部 __scroll 才能纵向滚动 */
+.dtx-asa-panel > .ant-spin-nested-loading {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dtx-asa-panel > .ant-spin-nested-loading > .ant-spin-container {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.dtx-asa-panel__scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.dtx-asa-panel__scroll .ant-tabs,
+.dtx-asa-panel__scroll .ant-tabs-content-holder,
+.dtx-asa-panel__scroll .ant-tabs-content,
+.dtx-asa-panel__scroll .ant-tabs-tabpane {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.dtx-asa-panel__status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dtx-asa-panel__pill {
+  flex: 1 1 120px;
+  min-width: 100px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.dtx-asa-panel__pill--ok {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.dtx-asa-panel__pill--warn {
+  border-color: #fcd34d;
+  background: #fffbeb;
+}
+
+.dtx-asa-panel__pill--err {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}

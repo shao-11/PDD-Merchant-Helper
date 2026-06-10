@@ -1,0 +1,130 @@
+/* 登录页：与工具箱首页 hub-shell 同系蓝白风格 */
+.dtx-login {
+  width: 420px;
+  min-height: 540px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: #ffffff;
+}
+
+html:has(.dtx-login),
+body:has(.dtx-login) {
+  margin: 0;
+  background: #ffffff;
+}
+
+#root:has(.dtx-login) {
+  margin: 0;
+  background: #ffffff;
+}
+
+.dtx-login__shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow:
+    0 4px 24px rgba(15, 23, 42, 0.06),
+    0 1px 3px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(22, 119, 255, 0.08);
+  overflow: hidden;
+}
+
+.dtx-login__top {
+  padding: 20px 20px 16px;
+  background: linear-gradient(180deg, #fbfcff 0%, #ffffff 100%);
+  border-bottom: 1px solid #eef2f7;
+}
+
+.dtx-login__brand {
+  min-width: 0;
+}
+
+.dtx-login__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 4px;
+  box-shadow:
+    0 2px 8px rgba(22, 119, 255, 0.12),
+    0 0 0 1px rgba(22, 119, 255, 0.06);
+  flex-shrink: 0;
+}
+
+.dtx-login__title.ant-typography {
+  margin: 0 !important;
+  color: #0f172a !important;
+  font-weight: 700;
+  font-size: 17px !important;
+}
+
+.dtx-login__subtitle.ant-typography {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.dtx-login__main {
+  flex: 1;
+  padding: 20px 20px 16px;
+  background: #fafbfd;
+  display: flex;
+  flex-direction: column;
+}
+
+.dtx-login__card {
+  background: #ffffff;
+  border: 1px solid #e8eef7;
+  border-radius: 14px;
+  padding: 20px 18px 8px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.dtx-login__card-title.ant-typography {
+  margin: 0 0 4px !important;
+  font-size: 15px !important;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.dtx-login__card-hint.ant-typography {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+
+.dtx-login__form .ant-form-item-label > label {
+  font-size: 13px;
+  color: #334155;
+}
+
+.dtx-login__submit {
+  margin-top: 4px;
+  height: 40px;
+  font-weight: 600;
+}
+
+.dtx-login__footer {
+  margin-top: auto;
+  padding: 12px 16px;
+  text-align: center;
+  border-top: 1px solid #eef2f7;
+  background: #f8fafc;
+}
+
+.dtx-login__footer-text.ant-typography {
+  font-size: 11px;
+  color: #94a3b8 !important;
+}
+
+.dtx-login__loading {
+  width: 420px;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+}
